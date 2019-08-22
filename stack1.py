@@ -117,7 +117,7 @@ def reverse(string):
     stack = newStack()
 
     # Push all letters of string into stack
-    for i in range(0, n, 1):
+    for i in range(n):
         push(stack, string[i])
 
     # Making the string empty since letters are now in stack
@@ -126,7 +126,8 @@ def reverse(string):
 
     # Pop all letters out of the stack  and
     # put them back to string, should now all be reversed
-    for i in range(0, n, 1):
+    for i in range(n):
+      # string now = what is pop'd from stack
         string += pop(stack)
 
 # return result
